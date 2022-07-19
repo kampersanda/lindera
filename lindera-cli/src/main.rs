@@ -123,7 +123,8 @@ fn main() -> LinderaResult<()> {
             // EOS
             break;
         }
-        text = text.trim().to_string();
+        // text = text.trim().to_string();
+        text = text.trim_end().to_string();
 
         // tokenize
         let tokens = tokenizer.tokenize(&text)?;
